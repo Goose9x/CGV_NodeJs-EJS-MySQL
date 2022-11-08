@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+
+body,
+html {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* CSS header  */
+.header * {
+    height: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+.header-mini {
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 30px;
+}
+
+.header-mini ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-mini * {
+    display: inline-block;
+    color: black;
+    margin-left: 10px;
+    font-size: 95%;
+    font-weight: 800px;
+}
+
+#VNese,
+#EN {
+    color: white;
+    box-shadow: 0 0 0 0 black;
+    width: 40px;
+    text-align: center;
+    line-height: 22px;
+}
+
+#VNese {
+    background: rgb(235, 40, 40);
+    border-radius: 16% 0 0 16%;
+}
+
+#EN {
+    background: gray;
+    border-radius: 0 16% 16% 0;
+    margin-left: 0;
+}
+
+.header-main {
+    background: url("/assets/bg-top.png");
+    text-transform: uppercase;
+    background-repeat: repeat-x;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*TODO  Phần main kèm logo */
+.menu-header {
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-header>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-header li {
+    color: rgb(20, 20, 20);
+    font-weight: 700;
+    font-size: 95%;
+    display: flex;
+    margin-right: 40px;
+    align-items: flex-end;
+}
+
+.parent>li {
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+.menu-header a {
+    color: rgb(37, 37, 37);
+    display: flex;
+}
+
+.quick-choose {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px 0px 10px 20px;
+}
+
+.tin-tuc {
+    align-content: center;
+}
+
+.search {
+    background: white;
+    border: 1px solid rgb(189, 189, 189);
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.search input {
+    border: none;
+    line-height: 150%;
+    width: 120px;
+    text-transform: none;
+}
+
+.search-buy-infor {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.parent {
+    position: relative;
+}
+
+/**  Các menu nhỏ hiện lên khi hover vào menu trên */
+.child-menu {
+    box-shadow: 0px 0px 0px 5px rgba(32, 32, 32, 1);
+    background: rgb(32, 32, 32);
+    margin: 0;
+    padding: 20px 0px 20px 10px;
+    border: 2px solid gray;
+    flex-direction: row;
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+.child-menu li {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.child-menu li:last-child {
+    margin-bottom: 0px;
+}
+
+.child-menu a {
+    display: block;
+    color: white;
+    text-transform: none;
+}
+
+.hover-effect:hover {
+    cursor: pointer;
+}
+
+#mini-menu1:hover #child-menu1 {
+    top: 70px;
+    left: 150px;
+    display: block;
+    z-index: 999;
+}
+
+#mini-menu2:hover #child-menu2 {
+    top: 70px;
+    left: 250px;
+    display: block;
+}
+
+#mini-menu3:hover #child-menu3 {
+    top: 70px;
+    left: 350px;
+    display: block;
+}
+
+#mini-menu4:hover #child-menu4 {
+    top: 70px;
+    left: 450px;
+    display: block;
+    z-index: 100;
+}
+
+.hover-red {
+    text-decoration: none;
+}
+
+.header-text:hover {
+    color: rgb(245, 88, 88);
+    transition: 0.2s;
+}
+
+.hover-red:hover {
+    color: rgb(253, 123, 123);
+    transition: 0.2s;
+}
+
+.header-main-right {
+    display: flex;
+}
+
+.kenhcine {
+    margin-top: 27px;
+}
+
+.mua-ve {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+.hover-effect:hover {
+    cursor: pointer;
+}
+
+/* Header end here */
+
+/* CSS banner */
+.banner-left {
+    position: fixed;
+    top: 10px;
+    left: 50px;
+}
+
+.banner-right {
+    position: fixed;
+    top: 10px;
+    right: 50px;
+}
+
+/* CSS widget */
+.widget {
+    width: 1016px;
+    margin: auto;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.widget ul {
+    margin: auto;
+}
+
+.widget * {
+    display: inline-block;
+    /* line-height: 10px; */
+}
+
+.widget li {
+    padding: 0;
+    margin: 0;
+    /*? Question here : Rộng 980px , chia 7 phần mỗi phần 140px nhưng vẫn bị tràn xuống ? */
+    width: 135px;
+    height: 90px;
+    border-right: 1px solid black;
+    box-sizing: content-box;
+    line-height: 10px;
+}
+
+#widget-1 {
+    background: url("/assets/widget.png") 0px 0px;
+}
+
+#widget-2 {
+    background: url("/assets/widget.png") 128px 0px;
+}
+
+#widget-3 {
+    background: url("/assets/widget.png") 256px 0px;
+}
+
+#widget-4 {
+    background: url("/assets/widget.png") 400px 0px;
+}
+
+#widget-5 {
+    background: url("/assets/widget.png") 537px 0px;
+}
+
+#widget-6 {
+    background: url("/assets/widget.png") 678px 0px;
+}
+
+#widget-7 {
+    background: url("/assets/widget.png") 814px 0px;
+    border-right: none;
+}
+
+.widget-full {
+    height: 90px;
+    width: 135px;
+}
+
+.widget::after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 980px;
+    height: 1px;
+    background: black;
+}
+
+/* footer */
+
+.footer-content {
+    margin-top: 40px;
+}
+
+.footer-brand-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.list-brand-film {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: var(--width);
+}
+
+.list-brand-film li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-brand-film a {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#brand-1 {
+    background: url("/assets/brand-film-footer.png") -18px -6px;
+    width: 65px;
+    height: 32px;
+}
+
+#brand-2 {
+    background: url("/assets/brand-film-footer.png") -708px -13px;
+    width: 85px;
+    height: 20px;
+}
+
+#brand-3 {
+    background: url("/assets/brand-film-footer.png") -981px -9px;
+    width: 76px;
+    height: 29px;
+}
+
+#brand-4 {
+    background: url("/assets/brand-film-footer.png") -567px -10px;
+    width: 98px;
+    height: 28px;
+}
+
+#brand-5 {
+    background: url("/assets/brand-film-footer.png") -1111px -10px;
+    width: 112px;
+    height: 27px;
+}
+
+#brand-6 {
+    background: url("/assets/brand-film-footer.png") -133px -6px;
+    width: 101px;
+    height: 29px;
+}
+
+#brand-7 {
+    background: url("/assets/brand-film-footer.png") -1275px -11px;
+    width: 57px;
+    height: 26px;
+}
+
+#brand-8 {
+    background: url("/assets/brand-film-footer.png") -1362px -4px;
+    width: 115px;
+    height: 43px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 980px;
+    font-size: 90%;
+    color: rgb(90, 90, 90);
+}
+
+.footer-main-content h3 {
+    margin-bottom: 7px;
+}
+
+.footer-main-content ul {
+    list-style: none;
+}
+
+.footer-main-content a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    font-size: 110%;
+    word-spacing: 1px;
+}
+
+.icon-follow ul li {
+    display: inline;
+}
+
+#fb {
+    display: inline-block;
+    background: url("/assets/social-film-footer.png") -6px 0px;
+    width: 43px;
+    height: 43px;
+}
+
+#youtube {
+    display: inline-block;
+    background: url("/assets/social-film-footer.png") -52px 0px;
+    width: 43px;
+    height: 43px;
+}
+
+#insta {
+    display: inline-block;
+    background: url("/assets/social-film-footer.png") -97px 0px;
+    width: 43px;
+    height: 43px;
+}
+
+#zalo {
+    display: inline-block;
+    background: url("/assets/social-film-footer.png") -190px 0px;
+    width: 43px;
+    height: 43px;
+}
+
+.zoom-icon:hover {
+    transition: 0.2s;
+    transform: scale(1.4);
+}
+
+.customer-cgv {
+    width: 274px;
+}
+
+.footer-address {
+    border-top: 2px solid black;
+}
+
+.cgv-address-content {
+    padding-top: 20px;
+    color: rgb(90, 90, 90);
+    width: 980px;
+    margin: auto;
+    font-size: 14px;
+    display: flex;
+
+}
+
+.logo-footer-cgv {
+    width: 100px;
+    height: 90px;
+    margin: auto;
+    margin-right: 30px;
+}
+
+.logo-footer-cgv img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-brick {
+    width: 100%;
+    height: 120px;
+    background-image: url("/assets/brick-footer.jpg");
+}
+
+/* Chung trang chủ */
+
+.slide-container {
+    width: 980px;
+    /* height: 600px; */
+    margin-top: 50px;
+    margin: auto;
+}
+
+.container1 {
+    padding-left: 200px;
+}
+
+.carousel-indicators button {
+    margin-top: -100px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* ẩn hình ảnh cho phần tử slideshow */
+.mySlides {
+    display: none;
+}
+
+/* thiết kế nút mũi tên*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* thiết kế nút mũi tên next nằm phía bên phải */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Thiết lập style cho nội dung của mỗi phần tử slideshow */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Thiết lập style cho số hiển thị của phần tử */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* thiết lập style  nút tròn điều khiển*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* tạo hiệu ứng chuyển động fade */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.event {
+    margin: auto;
+    width: 980px;
+}

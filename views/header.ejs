@@ -1,0 +1,64 @@
+<div class="header">
+    <div class="header-mini">
+        <ul>
+            <li><a class="header-text" href="#">tuyển dụng</a></li>
+            <li><a class="header-text" href="#">tin mới và ưu đãi </a></li>
+            <li><a class="header-text" href="#">vé của tôi </a></li>
+            <% if (!userName) { %>
+                <li><a class="header-text" href="/auth/login">đăng nhập/ đăng ký</a></li>
+                <% } else {%>
+                    <li><a class="header-text" href="https://www.w3schools.com/cssref/pr_pos_overflow.php">Xin chào,
+                            <%= userName %>!
+                        </a></li>
+                    <% } %>
+                        <li><a class="header-text" href="#" id="VNese">VN</a><a href="#" id="EN">EN</a></li>
+        </ul>
+    </div>
+</div>
+<div class="header-main">
+    <div class="menu-header">
+        <ul class="parent">
+            <li>
+                <a href="/" class="logo"><img src="/assets/cgvlogo.png" alt=""></a>
+            </li>
+            <li id="mini-menu1" class="hover-effect">
+                <ul id="child-menu1" class="child-menu">
+                    <li><a href="/movie/now-showing" class="hover-red">Phim đang chiếu</a></li>
+                    <li><a href="#" class="hover-red">Phim sắp chiếu</a></li>
+                </ul>
+                phim
+            </li>
+            <li id="mini-menu2" class="hover-effect">
+                <ul class="child-menu" id="child-menu2">
+                    <li><a href="#" class="hover-red">Tất cả các rạp</a></li>
+                    <li><a href="#" class="hover-red">Rạp đặc biệt</a></li>
+                    <li><a href="#" class="hover-red">Rạp sắp mở </a></li>
+                </ul>rạp cgv
+            </li>
+            <li id="mini-menu3" class="hover-effect">
+                <ul class="child-menu" id="child-menu3">
+                    <li><a href="#" class="hover-red">Tài khoản CGV </a></li>
+                    <li><a href="#" class="hover-red">Quyền lợi</a></li>
+                </ul>
+                thành viên
+            </li>
+            <li id="mini-menu4" class="hover-effect">
+                <ul class="child-menu" id="child-menu4">
+                    <li><a href="#" class="hover-red">Quầy online</li>
+                    <li><a href="#" class="hover-red">Sự kiện & Vé nhóm</a></li>
+                    <li><a href="#" class="hover-red">E-CGV</a></li>
+                    <li><a href="#" class="hover-red">CGV Restaurant</a></li>
+                    <li><a href="#" class="hover-red">Thẻ quà tặng</a></li>
+                </ul>
+                cultureplex
+            </li>
+        </ul>
+        <div class="header-main-right">
+            <p class="kenhcine"><a href="https://kenhcine.cgv.vn/"
+                    title="Kênh Cine - Tổng hợp tin tức điện ảnh mới nhất" target="_blank"><img alt="kênh Cine"
+                        src="https://www.cgv.vn/media/wysiwyg/2019/AUG/kenhcine.gif"></a></p>
+            <a href="#" class="mua-ve"><img src="/assets/mua-ve_ngay.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<!-- End header -->

@@ -1,0 +1,76 @@
+.lore-form h2 {
+    background-color: #e71a0f;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 20px 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lore-form {
+    width: 40%;
+    margin: auto;
+    font-size: 13px;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: 600;
+}
+
+.lore-form p {
+    margin: 10px 0;
+}
+
+.lore-form .input-holder {
+    width: 90%;
+    margin: auto;
+}
+
+.lore-form input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.login-btn {
+    width: 90%;
+    margin: auto;
+    background-color: #e71a0f;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.lore-form a {
+    text-decoration: none;
+}
+
+.lore-form .forgotPass {
+    text-align: center;
+}
+
+.lore-form .text-on {
+    color: white;
+    cursor: pointer;
+}
+
+.lore-form .text-off {
+    color: silver;
+    cursor: pointer;
+}
+
+.login-btn {
+    cursor: pointer;
+}
+
+.errmessage {
+    color: red;
+    font-size: 10px;
+}

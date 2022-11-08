@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/movieId.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- icon -->
+    <link rel="icon"
+        href="https://play-lh.googleusercontent.com/9N7f8PWb1zlDqOR4mepkNFkRt5SlrjFoLsg5jYtVhvq9LeQneLKyHg9eEx4BSgyl7F4"
+        type="image/x-icon">
+    <!-- Font Awesome Introduction W3S -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include('header.ejs'); %>
+        <div class="pdc <%= movieData.movieId %>">
+            <h1>NỘI DUNG PHIM</h1>
+        </div>
+        <div class="content-wrapper">
+            <div class="poster" style="background-image: url('<%= movieData.image %>')">
+            </div>
+            <div class="content">
+                <h5>
+                    <%= movieData.title %>
+                </h5>
+                <p><span class="bold">Đạo diễn: </span>
+                    <%= movieData.director %>
+                </p>
+                <p><span class="bold">Diễn viên: </span>
+                    <%= movieData.casts %>
+                </p>
+                <p><span class="bold">Thể loại: </span>
+                    <%= movieData.genre %>
+                </p>
+                <p><span class="bold">Khởi chiếu: </span>
+                    <%= movieData.releaseDate %>
+                </p>
+                <p><span class="bold">Thời lượng: </span>
+                    <%= movieData.duration %>
+                </p>
+                <p><span class="bold">Ngôn ngữ: </span>
+                    <%= movieData.language %>
+                </p>
+                <br>
+                <!-- <button type="button" title="Mua vé" class="button btn-booking">
+                    <span><span>Mua vé</span></span>
+                </button> -->
+                <!-- Button trigger modal -->
+                <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span>Mua vé</span>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div style="margin: 0px; position: absolute; top: 20%; left: 15%;" class="modal-dialog">
+                        <div id="modal-editor" class="modal-content" style="width: 1000px; ">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    <%= movieData.title %>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <% for( let j=0; j < 30; j++ ) { %>
+                                        <div class="col-1 movie date movie-<%= movieArray[j] %>">
+                                            <%= new Date(new Date().setDate(movieData.todayCalendar.getDate() +
+                                                j)).toISOString().substring(0, 10)%>
+                                        </div>
+                                        <% } %>
+                                </div>
+                            </div>
+                            <div class="city" style="width:90%; margin:auto;">
+                                <% for( let i=0; i < city.length; i++ ) { %>
+                                    <div id="state-<%= city[i].cityId %>" class="col-2 movie state">
+                                        <%= city[i].cityName %>
+                                    </div>
+                                    <% } %>
+                                        <div class="messageMovie">Hôm nay không chiếu phim (~TT . TT)~, chọn ngày khác
+                                            điiii !!!
+                                        </div>
+                            </div>
+                            <div id="cinema" class="cinema-<%= movieData.movieId %>">
+                                <div class="col-2 movie time" style="text-align: center;"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" title="Mua vé" class="button btn-trailer">
+                    <span><span>Trailer</span></span>
+                </button>
+            </div>
+        </div>
+        <div class="description">
+            <%= movieData.description %>
+        </div>
+        <!-- footer -->
+        <div class="footer-content">
+            <div class="footer-brand-slide">
+                <ul class="list-brand-film">
+                    <li><a id="brand-1" href="#"></a></li>
+                    <li><a id="brand-2" href="#"></a></li>
+                    <li><a id="brand-3" href="#"></a></li>
+                    <li><a id="brand-4" href="#"></a></li>
+                    <li><a id="brand-5" href="#"></a></li>
+                    <li><a id="brand-6" href="#"></a></li>
+                    <li><a id="brand-7" href="#"></a></li>
+                    <li><a id="brand-8" href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer-main">
+                <div class="footer-main-content">
+                    <div class="cgv-vietnam">
+                        <h3>CGV Việt Nam</h3>
+                        <ul>
+                            <li><a href="#">Giới Thiệu</a></li>
+                            <li><a href="#">Tiện ích Online</a></li>
+                            <li><a href="#">Thẻ Quà Tặng</a></li>
+                            <li><a href="#">Tuyển Dụng</a></li>
+                            <li><a href="#">Liên Hệ Quảng Cáo CGV</a></li>
+                        </ul>
+                    </div>
+                    <div class="cgv-policy">
+                        <h3>Điều khoản sử dụng</h3>
+                        <ul>
+                            <li><a href="#">
+                                    <p>Điều khoản chung</p>
+                                </a></li>
+                            <li><a href="#">Điều khoản giao dịch</a></li>
+                            <li><a href="#">Chính sách thanh toán</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                    <div class="cgv-follow-us">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <div class="icon-follow">
+                            <ul>
+                                <li><a class="zoom-icon" id="fb" href="#"></a></li>
+                                <li><a class="zoom-icon" id="youtube" href="#"></a></li>
+                                <li><a class="zoom-icon" id="insta" href="#"></a></li>
+                                <li><a class="zoom-icon" id="zalo" href="#"></a></li>
+                            </ul>
+                        </div>
+                        <a href="#"><img src="/assets/cong-thuong.PNG" alt=""></a>
+                    </div>
+                    <div class="customer-cgv">
+                        <h3>Chăm sóc khách hàng</h3>
+                        <p>Hotline: 1900 6017</br>
+                            Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết )</p>
+                        <p>Email hỗ trợ : <a href="#">hoidap@cgv.vn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-address">
+            <div class="cgv-address-content">
+                <div class="logo-footer-cgv"><img src="/assets/footer-address-logo.png" alt=""></div>
+                <div class="text-cgv-address">
+                    <h3>CÔNG TY TNHH CJ CGV VIETNAM</h3>
+                    <p>Giấy CNĐKDN: 0303675393, đăng ký lần đầu ngày 31/7/2008, đăng ký thay đổi lần thứ 5 ngày
+                        14/10/2015,
+                        cấp bởi Sở KHĐT thành phố Hồ Chí Minh.</p>
+                    <p>Địa Chỉ:&nbsp;Tầng 2, Rivera Park Saigon - Số 7/28 Thành Thái, P.14, Q.10, TPHCM.</p>
+                    <p>Hotline: 1900 6017</p>
+                    <p>COPYRIGHT 2017 CJ CGV. All RIGHTS RESERVED .</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-brick"></div>
+        <script src="/js/movieId.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

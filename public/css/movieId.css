@@ -1,0 +1,124 @@
+.pdc {
+    margin: auto;
+    width: 75%;
+    border-bottom: 3px solid black;
+}
+
+.poster {
+    width: 200px;
+    height: 268px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 30px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#modal-editor {
+    position: fixed;
+    top: 10%;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+#modal-editor::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f0ebeb;
+}
+
+#modal-editor::-webkit-scrollbar-thumb {
+    background-color: #e95353;
+}
+
+.content-wrapper {
+    padding-top: 30px;
+    width: 980px;
+    display: flex;
+    margin: auto;
+}
+
+.content p {
+    margin-bottom: 0px;
+}
+
+.content h5 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.button {
+    background: none no-repeat scroll 0 0#E71A0F;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.description {
+    padding-top: 30px;
+    width: 980px;
+    margin: auto;
+}
+
+.modal-header {
+    padding: 0px !important;
+    padding-right: 10px !important;
+}
+
+.movie {
+    background-color: #f0eaac;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.movie:hover {
+    border: 1px solid black;
+}
+
+.on {
+    border: 1px solid black;
+}
+
+.state,
+.messageMovie,
+#cinema {
+    display: none;
+}
+
+.cinema {
+    margin: auto;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid black;
+}
+
+#exampleModalLabel {
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.movie-0,
+.movie-1,
+.movie-2,
+.movie-3,
+.movie-4,
+.movie-5,
+.movie-6 {
+    background-color: #eee690;
+}
+
+.city {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #DEE2E6;
+    display: flex;
+    text-align: center;
+}

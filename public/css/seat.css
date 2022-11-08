@@ -1,0 +1,118 @@
+.seat-wrapper {
+    width: 70%;
+    margin: auto;
+    border: 1px solid #D4D3C9;
+}
+
+.seat-wrapper h4 {
+    width: 100%;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-bottom: 0px;
+}
+
+.seat-wrapper .information p {
+    margin-bottom: 0px;
+}
+
+.seat-wrapper .information {
+    background-color: #FFF1CE;
+    font-weight: bold;
+    border: 1px solid #D4D3C9;
+    padding: 10px 0px 10px 10px;
+}
+
+.seat-wrapper h5 {
+    width: 100%;
+    background-color: #BCBDC0;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: 1px solid #D4D3C9;
+    margin-bottom: 0px;
+}
+
+.seat-booking p {
+    text-align: center;
+}
+
+.seat-booking .row {
+    padding: 0px;
+    width: 30%;
+    margin: auto;
+}
+
+.seat-booking .col-2 {
+    border: 1px solid black;
+    padding: 0px;
+    text-align: center;
+}
+
+.bottom-content {
+    background-color: #000;
+
+}
+
+.format-bg-top {
+    width: 100%;
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg-top-seatmap.png) repeat-x top left transparent;
+    height: 8px;
+    overflow: hidden;
+}
+
+.format-bg-bottom {
+    width: 100%;
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg-bottom-seatmap.png) repeat-x bottom left transparent;
+    height: 8px;
+    overflow: hidden;
+}
+
+.mini-wrapper ul {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: auto;
+}
+
+.mini-wrapper li {
+    margin: auto;
+}
+
+.film-image {
+    /* z-index: 2; */
+    width: 150px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.seat {
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    cursor: pointer;
+}
+
+.colorred {
+    background-color: yellow;
+}
+
+#finish {
+    padding: 10px;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background: red;
+}

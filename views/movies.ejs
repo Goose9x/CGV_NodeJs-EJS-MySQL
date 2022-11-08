@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/movies.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- icon -->
+    <link rel="icon"
+        href="https://play-lh.googleusercontent.com/9N7f8PWb1zlDqOR4mepkNFkRt5SlrjFoLsg5jYtVhvq9LeQneLKyHg9eEx4BSgyl7F4"
+        type="image/x-icon">
+    <!-- Font Awesome Introduction W3S -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <%- include('header.ejs'); %>
+        <div class="pdc">
+            <h1>Phim Đang Chiếu</h1>
+        </div>
+        <div class="container">
+            <% for( let i=0; i < data.length; i++ ) { %>
+                <div class="row">
+                    <% for( let j=0; j < data[i].length; j++ ) { %>
+                        <div class="col-3 ">
+                            <a href="/movie/<%= data[i][j].movieId %>" style="text-decoration: none; color: black">
+                                <div class="card" style="width: 200px; height: 400px;">
+                                    <div class="card-img-wrapper">
+                                        <img style="border: 5px solid black" class="card-img-top"
+                                            src="<%= data[i][j].image %>" alt="Card image cap">
+                                        <h2>MUA VÉ</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <%= data[i][j].title %>
+                                        </h5>
+                                        <p class="card-text" style="font-size: 15px;">
+                                            <span style="font-weight: bold;">Thể loại: </span>
+                                            <%= data[i][j].genre %>
+                                        </p>
+                                        <p class="card-text" style="font-size: 15px;">
+                                            <span style="font-weight: bold;">Thời lượng: </span>
+                                            <%= data[i][j].duration %>
+                                        </p>
+                                        <p class="card-text" style="font-size: 15px;">
+                                            <span style="font-weight: bold;">Khởi chiếu: </span>
+                                            <%= data[i][j].releaseDate.toISOString().substring(0, 10) %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                </div>
+                <% } %>
+        </div>
+        <br><br><br><br>
+        <!-- footer -->
+        <div class="footer-content">
+            <div class="footer-brand-slide">
+                <ul class="list-brand-film">
+                    <li><a id="brand-1" href="#"></a></li>
+                    <li><a id="brand-2" href="#"></a></li>
+                    <li><a id="brand-3" href="#"></a></li>
+                    <li><a id="brand-4" href="#"></a></li>
+                    <li><a id="brand-5" href="#"></a></li>
+                    <li><a id="brand-6" href="#"></a></li>
+                    <li><a id="brand-7" href="#"></a></li>
+                    <li><a id="brand-8" href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer-main">
+                <div class="footer-main-content">
+                    <div class="cgv-vietnam">
+                        <h3>CGV Việt Nam</h3>
+                        <ul>
+                            <li><a href="#">Giới Thiệu</a></li>
+                            <li><a href="#">Tiện ích Online</a></li>
+                            <li><a href="#">Thẻ Quà Tặng</a></li>
+                            <li><a href="#">Tuyển Dụng</a></li>
+                            <li><a href="#">Liên Hệ Quảng Cáo CGV</a></li>
+                        </ul>
+                    </div>
+                    <div class="cgv-policy">
+                        <h3>Điều khoản sử dụng</h3>
+                        <ul>
+                            <li><a href="#">
+                                    <p>Điều khoản chung</p>
+                                </a></li>
+                            <li><a href="#">Điều khoản giao dịch</a></li>
+                            <li><a href="#">Chính sách thanh toán</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                    <div class="cgv-follow-us">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <div class="icon-follow">
+                            <ul>
+                                <li><a class="zoom-icon" id="fb" href="#"></a></li>
+                                <li><a class="zoom-icon" id="youtube" href="#"></a></li>
+                                <li><a class="zoom-icon" id="insta" href="#"></a></li>
+                                <li><a class="zoom-icon" id="zalo" href="#"></a></li>
+                            </ul>
+                        </div>
+                        <a href="#"><img src="/assets/cong-thuong.PNG" alt=""></a>
+                    </div>
+                    <div class="customer-cgv">
+                        <h3>Chăm sóc khách hàng</h3>
+                        <p>Hotline: 1900 6017</br>
+                            Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết )</p>
+                        <p>Email hỗ trợ : <a href="#">hoidap@cgv.vn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-address">
+            <div class="cgv-address-content">
+                <div class="logo-footer-cgv"><img src="/assets/footer-address-logo.png" alt=""></div>
+                <div class="text-cgv-address">
+                    <h3>CÔNG TY TNHH CJ CGV VIETNAM</h3>
+                    <p>Giấy CNĐKDN: 0303675393, đăng ký lần đầu ngày 31/7/2008, đăng ký thay đổi lần thứ 5 ngày
+                        14/10/2015,
+                        cấp bởi Sở KHĐT thành phố Hồ Chí Minh.</p>
+                    <p>Địa Chỉ:&nbsp;Tầng 2, Rivera Park Saigon - Số 7/28 Thành Thái, P.14, Q.10, TPHCM.</p>
+                    <p>Hotline: 1900 6017</p>
+                    <p>COPYRIGHT 2017 CJ CGV. All RIGHTS RESERVED .</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-brick"></div>
+        <script src="/js/movies.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+
+</body>
+
+</html>

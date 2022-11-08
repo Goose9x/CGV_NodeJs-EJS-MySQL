@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <!-- icon -->
+    <link rel="icon"
+        href="https://play-lh.googleusercontent.com/9N7f8PWb1zlDqOR4mepkNFkRt5SlrjFoLsg5jYtVhvq9LeQneLKyHg9eEx4BSgyl7F4"
+        type="image/x-icon">
+    <!-- Font Awesome Introduction W3S -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include('header.ejs'); %>
+        <br>
+        <br>
+        <br>
+        <form id="loginForm" class="lore-form">
+            <h2>
+                <span class="lo-ren text-on">ĐĂNG NHẬP</span>
+                <span class="re-ren text-off">ĐĂNG KÝ</span>
+            </h2>
+            <div class="input-holder">
+                <p>Email hoặc số điện thoại</p>
+                <input class="email" type="text" name="email" placeholder="Email hoặc số điện thoại">
+                <p>Mật khẩu</p>
+                <input class="password" type="password" name="password" placeholder="Mật khẩu">
+                <div class="errmessage"></div>
+            </div>
+            <br>
+            <br>
+            <div class="login-btn">ĐĂNG NHẬP</div>
+            <br>
+            <div class="forgotPass"><a href="/auth/forgotPassword">Quên mật khẩu? Ấn vào đây nà!!!</a></div>
+            <br>
+            <br>
+        </form>
+        <!-- footer -->
+        <div class="footer-content">
+            <div class="footer-brand-slide">
+                <ul class="list-brand-film">
+                    <li><a id="brand-1" href="#"></a></li>
+                    <li><a id="brand-2" href="#"></a></li>
+                    <li><a id="brand-3" href="#"></a></li>
+                    <li><a id="brand-4" href="#"></a></li>
+                    <li><a id="brand-5" href="#"></a></li>
+                    <li><a id="brand-6" href="#"></a></li>
+                    <li><a id="brand-7" href="#"></a></li>
+                    <li><a id="brand-8" href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer-main">
+                <div class="footer-main-content">
+                    <div class="cgv-vietnam">
+                        <h3>CGV Việt Nam</h3>
+                        <ul>
+                            <li><a href="#">Giới Thiệu</a></li>
+                            <li><a href="#">Tiện ích Online</a></li>
+                            <li><a href="#">Thẻ Quà Tặng</a></li>
+                            <li><a href="#">Tuyển Dụng</a></li>
+                            <li><a href="#">Liên Hệ Quảng Cáo CGV</a></li>
+                        </ul>
+                    </div>
+                    <div class="cgv-policy">
+                        <h3>Điều khoản sử dụng</h3>
+                        <ul>
+                            <li><a href="#">
+                                    <p>Điều khoản chung</p>
+                                </a></li>
+                            <li><a href="#">Điều khoản giao dịch</a></li>
+                            <li><a href="#">Chính sách thanh toán</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                    <div class="cgv-follow-us">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <div class="icon-follow">
+                            <ul>
+                                <li><a class="zoom-icon" id="fb" href="#"></a></li>
+                                <li><a class="zoom-icon" id="youtube" href="#"></a></li>
+                                <li><a class="zoom-icon" id="insta" href="#"></a></li>
+                                <li><a class="zoom-icon" id="zalo" href="#"></a></li>
+                            </ul>
+                        </div>
+                        <a href="#"><img src="/assets/cong-thuong.PNG" alt=""></a>
+                    </div>
+                    <div class="customer-cgv">
+                        <h3>Chăm sóc khách hàng</h3>
+                        <p>Hotline: 1900 6017</br>
+                            Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết )</p>
+                        <p>Email hỗ trợ : <a href="#">hoidap@cgv.vn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-address">
+            <div class="cgv-address-content">
+                <div class="logo-footer-cgv"><img src="/assets/footer-address-logo.png" alt=""></div>
+                <div class="text-cgv-address">
+                    <h3>CÔNG TY TNHH CJ CGV VIETNAM</h3>
+                    <p>Giấy CNĐKDN: 0303675393, đăng ký lần đầu ngày 31/7/2008, đăng ký thay đổi lần thứ 5 ngày
+                        14/10/2015,
+                        cấp bởi Sở KHĐT thành phố Hồ Chí Minh.</p>
+                    <p>Địa Chỉ:&nbsp;Tầng 2, Rivera Park Saigon - Số 7/28 Thành Thái, P.14, Q.10, TPHCM.</p>
+                    <p>Hotline: 1900 6017</p>
+                    <p>COPYRIGHT 2017 CJ CGV. All RIGHTS RESERVED .</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-brick"></div>
+        <script src="/js/login.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>

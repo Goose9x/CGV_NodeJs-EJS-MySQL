@@ -1,0 +1,12 @@
+const express = require("express");
+const authController = require("../controllers/auth.controller");
+const router = express.Router();
+const { requireAdmin } = require("../middlewares/auth.middlewares");
+router.get("/login", authController.renderLogin);
+router.get("/admin/users", requireAdmin, authController.renderAdminUsers);
+router.get("/admin/movies", requireAdmin, authController.renderAdminMovies);
+router.post("/login", authController.login);
+router.get("/register", authController.renderRegister);
+router.post("/register", authController.register);
+router.get("/forgotPassword", authController.forgotPassword);
+module.exports = router;
